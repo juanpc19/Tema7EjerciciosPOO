@@ -69,7 +69,7 @@ public class CuentaCorriente {
 	void mostrarInformacion() {
 		// print de pantalla de los atributos con los valores del objeto con el que se
 		// usa el metodo
-		System.out.println(dni + " " + nombre + " " + saldo);
+		System.out.println("La cuenta de: " + dni + " " + nombre + ", tiene " + saldo+ " de saldo.");
 	}
 
 }
