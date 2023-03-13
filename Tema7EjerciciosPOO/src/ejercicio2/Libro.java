@@ -2,27 +2,79 @@ package ejercicio2;
 
 public class Libro {
 
-	String titulo[] = new String[0];
+	String titulo;// atributo que guardara el titulo del libro
 
-	String autor[] = new String[0];
+	String autor;// atributo que guardara el autor del libro
 
-	int ejemplares[] = new int[0];
+	int ejemplaresDisponibles;// atributo que guardara cantidad de ejemplares disponibles
 
-	int prestados[] = new int[0];
-	
+	int ejemplaresPrestados;// atributo que guardara cantidad de ejemplares prestados
+
+	/**
+	 * constructor por defecto
+	 */
 	public Libro() {
 		super();
 	}
-	
-	public Libro(String[] titulo, String[] autor, int[] ejemplares, int[] prestados) {
+
+	/**
+	 * constructor con 4 parametros de entrada
+	 * 
+	 * @param titulo                proovera valor para el titulo del libro
+	 * @param autor                 proovera valor para guardar en autor del libro
+	 * @param ejemplaresDisponibles proovera valor para guardar cantidad disponible
+	 *                              de libro ejemplaresDisponibles
+	 * @param ejemplaresPrestados   proovera valor para guardar cantidad prestada
+	 *                              del libro ejemplaresPrestados
+	 */
+	public Libro(String titulo, String autor, int ejemplaresDisponibles, int ejemplaresPrestados) {
 		super();
 		this.titulo = titulo;
 		this.autor = autor;
-		this.ejemplares = ejemplares;
-		this.prestados = prestados;
+		this.ejemplaresDisponibles = ejemplaresDisponibles;
+		this.ejemplaresPrestados = ejemplaresPrestados;
 	}
 
-	
-	
+	/**
+	 * metodo que prestara un libro de ser posible
+	 * 
+	 * @return disponible que sera true o false segun sea posible hacer el prestamo
+	 *         o no
+	 */
+	boolean prestamo() {
+		boolean disponible = false;// variable que guardara true o false segun sea posible hacer el prestamo o no
+
+		// si hay 1 o mas ejemplares disponibles
+		if (ejemplaresDisponibles > 0) {
+			// doy a disponible valor true
+			disponible = true;
+			// resto 1 a ejemplaresDisponibles
+			ejemplaresDisponibles--;
+			// y sumo 1 a ejemplaresPrestados
+			ejemplaresPrestados++;
+		}
+		return disponible;
+	}
+
+	/**
+	 * metodo que devolvera un libro de ser posible
+	 * 
+	 * @return devolver que sera true o false segun sea posible hacer el prestamo o
+	 *         no
+	 */
+	boolean devolucion() {
+		boolean devolver = false;// variable que guardara true o false segun sea posible hacer la devolucion o no
+
+		// si hay 1 o mas ejemplares prestados
+		if (ejemplaresPrestados > 0) {
+			// doy a devolver valor true
+			devolver = true;
+			// sumo 1 a ejemplaresDisponibles
+			ejemplaresDisponibles++;
+			// resto 1 a ejemplaresPrestados
+			ejemplaresPrestados--;
+		}
+		return devolver;
+	}
 
 }

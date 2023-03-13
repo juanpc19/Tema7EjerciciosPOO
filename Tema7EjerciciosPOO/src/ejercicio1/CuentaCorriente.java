@@ -9,7 +9,7 @@ public class CuentaCorriente {
 	double saldo;// atributo que guardara el saldo
 
 	/**
-	 * constructor con 2 datos de entrada
+	 * constructor con 2 parametros de entrada
 	 * 
 	 * @param dni   guardara el dni de la cuenta
 	 * @param saldo guardara el saldo de la cuenta

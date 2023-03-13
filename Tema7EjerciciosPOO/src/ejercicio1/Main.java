@@ -12,7 +12,7 @@ public class Main {
 
 		Scanner dogma = new Scanner(System.in);// creo escaner y lo nombro dogma
 
-		// creo objeto de nombre cuenta y lo inicializo con valores concretos
+		// creo objeto de nombre cuenta y inicializo sus atributos con valores concretos
 		CuentaCorriente cuenta = new CuentaCorriente("45454545m", 20.5);
 
 		// solicito al usuario valor para extracto
@@ -39,9 +39,9 @@ public class Main {
 		// los valores de los atributos asociados al objeto especificado (cuenta)
 		cuenta.mostrarInformacion();
 
-		// hago lo mismo para objeto diferente (cuenta2) que contara con atributos
-		// diferentes al ser un obhjeto diferente, ademas nombre se especificara en
-		// lugar de dejarlo a valor por defecto
+		// hago lo mismo para objeto diferente (cuenta2) que contara con valores
+		// diferentes para sus atributos, al ser un objeto diferente, ademas nombre se
+		// especificara en lugar de dejarlo a valor por defecto
 		CuentaCorriente cuenta2 = new CuentaCorriente("22454545m", "manolo", 20.5);
 
 		System.out.println("Introduzca cantidad a extraer de su cuenta: ");
@@ -58,7 +58,7 @@ public class Main {
 
 		cuenta2.mostrarInformacion();
 
-		//cierro escaner
+		// cierro escaner
 		dogma.close();
 	}
 }
