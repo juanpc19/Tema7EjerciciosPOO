@@ -26,11 +26,11 @@ public class Punto {
 		y += dy;
 	}
 
-	void distancia(Punto p) {
+	double distancia(Punto p) {
 		double distancia = 0;
 		// p.x seria el objeto usado como parametro de entrada y this.x con el que llamo
 		// a la clase
-		Math.sqrt(Math.pow(p.x - this.x, 2) + Math.pow(p.y - this.y, 2));
-		System.out.println(distancia);
+		distancia=Math.sqrt(Math.pow(p.x - this.x, 2) + Math.pow(p.y - this.y, 2));
+		return distancia;
 	}
 }
