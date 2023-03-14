@@ -8,8 +8,6 @@ public class Main {
 		
 		Punto p2 = new Punto(-20,10);
 		
-		
-
 	}
 
 }
