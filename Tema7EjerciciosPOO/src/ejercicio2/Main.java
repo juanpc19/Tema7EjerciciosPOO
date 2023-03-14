@@ -16,7 +16,7 @@ public class Main {
 
 		// hago lo mismo para objeto diferente (libro2) que contara con valores
 		// diferentes para sus atributos al ser un objeto diferente
-		Libro libro2 = new Libro("Elantris", "Brandon sanderson", 0, 10);
+		Libro libro2 = new Libro("Elantris", "Brandon sanderson", 20, 2);
 
 		// bucle que se ejecutara mientras opcion sea diferente a 3 comprobando
 		// funcionamiento de clases con objeto libro

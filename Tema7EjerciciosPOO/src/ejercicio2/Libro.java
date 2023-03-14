@@ -6,15 +6,20 @@ public class Libro {
 
 	String autor;// atributo que guardara el autor del libro
 
-	int ejemplaresDisponibles;// atributo que guardara cantidad de ejemplares disponibles
+	final int ejemplaresDisponibles;// atributo que guardara cantidad de ejemplares disponibles
 
 	int ejemplaresPrestados;// atributo que guardara cantidad de ejemplares prestados
 
 	/**
-	 * constructor por defecto
+	 * constructor por defecto en el que inicializo el valor del atributo
+	 * ejemplaresDisponibles a 0 porque es final y necesito hacerlo para evitar
+	 * error de compilacion, aunque cada objeto podra tener un valor de
+	 * inicializacion diferente, pero una vez inicializado en objeto no podra
+	 * modificarse
 	 */
 	public Libro() {
 		super();
+		this.ejemplaresDisponibles = 0;
 	}
 
 	/**
@@ -28,7 +33,7 @@ public class Libro {
 	 *                              del libro ejemplaresPrestados
 	 */
 	public Libro(String titulo, String autor, int ejemplaresDisponibles, int ejemplaresPrestados) {
-		super();
+
 		this.titulo = titulo;
 		this.autor = autor;
 		this.ejemplaresDisponibles = ejemplaresDisponibles;
@@ -44,13 +49,11 @@ public class Libro {
 	boolean prestamo() {
 		boolean disponible = false;// variable que guardara true o false segun sea posible hacer el prestamo o no
 
-		// si hay 1 o mas ejemplares disponibles
-		if (ejemplaresDisponibles > 0) {
+		// si hay mas ejemplares disponibles que ejemplaresPrestados
+		if (ejemplaresPrestados < ejemplaresDisponibles) {
 			// doy a disponible valor true
 			disponible = true;
-			// resto 1 a ejemplaresDisponibles
-			ejemplaresDisponibles--;
-			// y sumo 1 a ejemplaresPrestados
+			// sumo 1 a ejemplaresPrestados
 			ejemplaresPrestados++;
 		}
 		return disponible;
@@ -69,9 +72,7 @@ public class Libro {
 		if (ejemplaresPrestados > 0) {
 			// doy a devolver valor true
 			devolver = true;
-			// sumo 1 a ejemplaresDisponibles
-			ejemplaresDisponibles++;
-			// resto 1 a ejemplaresPrestados
+			// resto 1 a ejemplaresDisponibles
 			ejemplaresPrestados--;
 		}
 		return devolver;
