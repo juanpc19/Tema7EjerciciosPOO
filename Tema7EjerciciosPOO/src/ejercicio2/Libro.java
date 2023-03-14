@@ -1,5 +1,13 @@
 package ejercicio2;
 
+/**
+ * Clase Libro que contiene un constructor por defecto, un constructor con 4
+ * parametros de entrada, un metodo para pedir prestado un libro y un metodo
+ * para devolver un libro
+ * 
+ * @author jperez
+ *
+ */
 public class Libro {
 
 	String titulo;// atributo que guardara el titulo del libro

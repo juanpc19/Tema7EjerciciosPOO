@@ -1,5 +1,13 @@
 package ejercicio1;
 
+/**
+ * Clase Cuenta corriente que contiene un constructor con 2 parametros de
+ * entrada, otro constructor con 3 parametros de entrada, un metodo para sacar
+ * dinero, otro para ingresar dinero y otro para mostrar informacion de la cuenta
+ * 
+ * @author jperez
+ *
+ */
 public class CuentaCorriente {
 
 	String dni;// atributo que guardara el dni
@@ -69,7 +77,7 @@ public class CuentaCorriente {
 	void mostrarInformacion() {
 		// print de pantalla de los atributos con los valores del objeto con el que se
 		// usa el metodo
-		System.out.println("La cuenta de: " + dni + " " + nombre + ", tiene " + saldo+ " de saldo.");
+		System.out.println("La cuenta de: " + dni + " " + nombre + ", tiene " + saldo + " de saldo.");
 	}
 
 }
