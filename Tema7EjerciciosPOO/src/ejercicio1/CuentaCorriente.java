@@ -1,9 +1,8 @@
 package ejercicio1;
 
 /**
- * Clase Cuenta corriente que contiene un constructor con 2 parametros de
- * entrada, otro constructor con 3 parametros de entrada, un metodo para sacar
- * dinero, otro para ingresar dinero y otro para mostrar informacion de la cuenta
+ * Clase Cuenta corriente que contiene metodos para realizar transacciones y ver
+ * los datos de cuentas bancarias
  * 
  * @author jperez
  *
@@ -23,7 +22,9 @@ public class CuentaCorriente {
 	 * @param saldo guardara el saldo de la cuenta
 	 */
 	CuentaCorriente(String dni, double saldo) {
+		// doy a atributo dni valor de parametro de entrada dni
 		this.dni = dni;
+		// doy a atributo saldo valor de parametro de entrada saldo
 		this.saldo = saldo;
 	}
 
@@ -35,8 +36,11 @@ public class CuentaCorriente {
 	 * @param saldo  guardara el saldo de la cuenta
 	 */
 	CuentaCorriente(String dni, String nombre, double saldo) {
+		// doy a atributo dni valor de parametro de entrada dni
 		this.dni = dni;
+		// doy a atributo nombre valor de parametro de entrada nombre
 		this.nombre = nombre;
+		// doy a atributo saldo valor de parametro de entrada saldo
 		this.saldo = saldo;
 	}
 
