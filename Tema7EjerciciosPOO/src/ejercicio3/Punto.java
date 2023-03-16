@@ -78,7 +78,6 @@ public class Punto {
 		// this.x seria la x del objeto con el que llamo a la clase y p.x seria la x del
 		// objeto usado como parametro de entrada
 		
-		//es thix.x atributo de clase o de objeto que llama funcion?
 		distancia = Math.sqrt(Math.pow(p.x - this.x, 2) + Math.pow(p.y - this.y, 2));
 		return distancia;
 	}
