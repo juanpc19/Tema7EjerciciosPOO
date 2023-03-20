@@ -82,9 +82,12 @@ public class Articulo {
 	double getPVPDescuento(int descuento) {
 		double pvpDescuento;// declaro variable que guardara valor de precio con descuento ya aplicado
 
-		// aplico el descuento al precio con el iva aplicado (llamando a funcion getPVP)
+		double pvp = getPVP();// declaro variable que guardara valor de pvp y le doy valor devuelto por
+								// funcion getPVP
+		
+		// aplico el descuento al pvp (que ya tiene el iva aplicado) 
 		// y guardo el valor obtenido en pvpDescuento
-		pvpDescuento = getPVP() - getPVP() / 100 * descuento;
+		pvpDescuento = pvp - getPVP() / 100 * descuento;
 
 		return pvpDescuento;
 	}
