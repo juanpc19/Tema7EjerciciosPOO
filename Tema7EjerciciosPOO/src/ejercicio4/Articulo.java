@@ -9,13 +9,13 @@ package ejercicio4;
  */
 public class Articulo {
 
-	String nombre;// atributo que contiene el nombre del articulo
+	private String nombre;// atributo que contiene el nombre del articulo
 
-	double precio;// atributo que contiene el precio del articulo
+	private double precio;// atributo que contiene el precio del articulo
 
-	final int iva = 21;// atributo que contiene el IVA
+	public static final int IVA = 21;// atributo que contiene el IVA
 
-	int cuantosQuedan;// atributo que contiene la cantidad restante del articulo
+	private int cuantosQuedan;// atributo que contiene la cantidad restante del articulo
 
 	/**
 	 * constructor con 3 parametros de entrada
@@ -27,11 +27,26 @@ public class Articulo {
 	public Articulo(String nombre, double precio, int cuantosQuedan) {
 		super();
 		// doy a atributo nombre valor de parametro de entrada nombre
-		this.nombre = nombre;
+		// si nombre no esta vacio y no es null
+		if (!nombre.isEmpty() && nombre != null) {
+			this.nombre = nombre;
+		} else {
+			System.out.println("Nombre introducido no valido.");
+		}
 		// doy a atributo precio valor de parametro de entrada precio
-		this.precio = precio;
+		// si precio mayor a 0
+		if (precio > 0) {
+			this.precio = precio;
+		} else {
+			System.out.println("Precio introducido no valido.");
+		}
 		// doy a atributo cuantosQuedan valor de parametro de entrada cuantosQuedan
-		this.cuantosQuedan = cuantosQuedan;
+		// si quedan 0 o mas
+		if (cuantosQuedan >= 0) {
+			this.cuantosQuedan = cuantosQuedan;
+		} else {
+			System.out.println("cantidad introducida no valido.");
+		}
 	}
 
 	/**
@@ -52,7 +67,7 @@ public class Articulo {
 
 		// aplico a pvp el IVA (pvp igual a precio dividido entre 100 multiplicado por
 		// iva)
-		pvp = precio + precio / 100 * iva;
+		pvp = precio + precio / 100 * IVA;
 
 		return pvp;
 	}
