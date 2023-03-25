@@ -12,7 +12,7 @@ public class Main {
 
 		int unidadesAlmacenar;// declaro variable que guardara valor de unidades a almacenar
 
-		// creo objeto de nombre art y lo inicializo con valores concretos
+		// creo nuevo objeto tipo Articulo y lo asigno a la variable art y lo inicializo con valores concretos
 		Articulo art = new Articulo("Monitor", 100.50, 5);
 
 		// creo escaner y lo nombro dogma

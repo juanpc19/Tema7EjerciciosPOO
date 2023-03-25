@@ -11,7 +11,7 @@ public class Main {
 		// creo escaner y lo nombro dogma
 		Scanner dogma = new Scanner(System.in);
 
-		// creo objeto de nombre libro y lo inicializo con valores concretos
+		//  creo nuevo objeto tipo Libro y lo asigno a la variable libro  y lo inicializo con valores concretos
 		Libro libro = new Libro("Los nacidos de la bruma", "Brandon sanderson", 10, 0);
 
 		// hago lo mismo para objeto diferente (libro2) que contara con valores

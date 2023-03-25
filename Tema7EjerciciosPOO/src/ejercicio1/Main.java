@@ -10,9 +10,10 @@ public class Main {
 
 		double ingreso;// guardara cantidad a ingresar
 
-		Scanner dogma = new Scanner(System.in);// creo escaner y lo nombro dogma
+		// creo escaner y lo nombro dogma
+		Scanner dogma = new Scanner(System.in);
 
-		// creo objeto de nombre cuenta y inicializo sus atributos con valores concretos
+		// creo nuevo objeto tipo CuentaCorriente y lo asigno a la variable cuenta y inicializo sus atributos con valores concretos
 		CuentaCorriente cuenta = new CuentaCorriente("45454545m", 20.5);
 
 		// solicito al usuario valor para extracto

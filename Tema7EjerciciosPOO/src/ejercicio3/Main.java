@@ -10,10 +10,9 @@ public class Main {
 
 		int valorY;// declaro variable que guardara valor con el modificar y
 
-		// creo objeto de nombre p y lo inicializo con valores concretos
+		// creo nuevo objeto tipo Punto y lo asigno a la variable p y lo inicializo con valores concretos
 		Punto p = new Punto(0, 0);
-
-		// creo objeto de nombre p2 y lo inicializo con valores concretos
+		// creo nuevo objeto tipo Punto y lo asigno a la variable p2 y lo inicializo con valores concretos
 		Punto p2 = new Punto(20, 20);
 
 		// cero escaner y lo nombro dogma
