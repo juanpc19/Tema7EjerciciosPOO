@@ -9,11 +9,11 @@ package ejercicio1;
  */
 public class CuentaCorriente {
 
-	String dni;// atributo que guardara el dni
+	private String dni;// atributo que guardara el dni
 
-	String nombre;// atributo que guardara el nombre
+	private String nombre;// atributo que guardara el nombre
 
-	double saldo;// atributo que guardara el saldo
+	private double saldo;// atributo que guardara el saldo
 
 	/**
 	 * constructor con 2 parametros de entrada
@@ -21,7 +21,7 @@ public class CuentaCorriente {
 	 * @param dni   guardara el dni de la cuenta
 	 * @param saldo guardara el saldo de la cuenta
 	 */
-	CuentaCorriente(String dni, double saldo) {
+	public CuentaCorriente(String dni, double saldo) {
 		// doy a atributo dni valor de parametro de entrada dni
 		this.dni = dni;
 		// doy a atributo saldo valor de parametro de entrada saldo
@@ -35,7 +35,7 @@ public class CuentaCorriente {
 	 * @param nombre dni guardara el nombre de la cuenta
 	 * @param saldo  guardara el saldo de la cuenta
 	 */
-	CuentaCorriente(String dni, String nombre, double saldo) {
+	public CuentaCorriente(String dni, String nombre, double saldo) {
 		// doy a atributo dni valor de parametro de entrada dni
 		this.dni = dni;
 		// doy a atributo nombre valor de parametro de entrada nombre
@@ -49,7 +49,7 @@ public class CuentaCorriente {
 	 * 
 	 * @param dineroSolicitado guardara la cantidad de dinero a extraer
 	 */
-	void sacarDinero(double dineroSolicitado) {
+	public void sacarDinero(double dineroSolicitado) {
 		// si el atributo saldo actual es mayor o igual que el dinero a extraer
 		if (saldo >= dineroSolicitado) {
 			// se llevara a cabo la extraccion restandole dineroSolicitado a atributo saldo
@@ -69,7 +69,7 @@ public class CuentaCorriente {
 	 * 
 	 * @param dineroIngresar
 	 */
-	void ingresarDinero(double dineroIngresar) {
+	public void ingresarDinero(double dineroIngresar) {
 		// añado el valor de dineroIngresar a atributo saldo
 		saldo += dineroIngresar;
 	}
@@ -78,7 +78,7 @@ public class CuentaCorriente {
 	 * metodo que mostrara los datos de la cuenta especificada asociada con su
 	 * propio objeto
 	 */
-	void mostrarInformacion() {
+	public void mostrarInformacion() {
 		// print de pantalla de los atributos con los valores del objeto con el que se
 		// usa el metodo
 		System.out.println("La cuenta de: " + dni + " " + nombre + ", tiene " + saldo + " de saldo.");

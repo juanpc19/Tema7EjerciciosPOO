@@ -8,9 +8,9 @@ package ejercicio3;
  */
 public class Punto {
 
-	int x;// atributo que guardara la coordenada longitud del punto
+	private int x;// atributo que guardara la coordenada longitud del punto
 
-	int y;// atributo que guardara la coordenada latitud del punto
+	private int y;// atributo que guardara la coordenada latitud del punto
 
 	/**
 	 * constructor con 2 parametros de entrada
